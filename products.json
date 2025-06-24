@@ -1,0 +1,48 @@
+[
+    {
+        "id": "1",
+        "name": "Chair",
+        "price": "4,999"
+    },
+    {
+        "id": "2",
+        "name": "Table",
+        "price": "3,999"
+    },
+    {
+        "id": "3",
+        "name": "Sofa",
+        "price": "19,999"
+    },
+    {
+        "id": "4",
+        "name": "Wardrobe",
+        "price": "25,999"
+    },
+    {
+        "id": "5",
+        "name": "Lamp",
+        "price": "2,999"
+    },
+    {
+        "id": "6",
+        "name": "Bed",
+        "price": "39,999"
+    },
+    {
+        "id": "7",
+        "name": "Recliner",
+        "price": "25,999"
+    },
+    {
+        "id": "8",
+        "name": "Curtains",
+        "price": "3,999"
+    },
+    {
+        "id": "9",
+        "name": "Desk",
+        "price": "17,999"
+    }
+    
+]
