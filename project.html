@@ -9,24 +9,30 @@
 
 <body>
     <style>
-/* body{
-    background-image: url('images/bg image.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-} */
+        /* body {
+            background-image: url('images/backgroundimg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: rgba(255, 255, 255, 0.6);
+            
+        } */
 
 
         h1 {
+            background-color: bisque;
             color: blue;
             text-align: center;
         }
 
         h2 {
+            background-color: #FFF9C4;
             text-align: center;
         }
 
         table {
+            width: 60%;
+            scale: 100%;
             border-collapse: collapse;
             color: black;
             margin: auto;
@@ -34,7 +40,7 @@
         }
 
         th {
-            
+            font-size: large;
             color: blueviolet;
             font-weight: bold;
             margin: auto;
@@ -46,69 +52,78 @@
             text-align: center;
             color: black;
             margin: auto;
-            border: 2px solid black;
+            border: 1px solid black;
             padding: auto;
 
         }
+
+        td img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .button {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .crt-btn {
+            background-color: green;
+            color: aliceblue;
+            cursor: pointer;
+            margin-right: 20px;
+        }
+
+        .edt-btn {
+            background-color: blue;
+            color: aliceblue;
+            cursor: pointer;
+            margin-right: 20px;
+        }
+
+        .del-btn {
+            background-color: red;
+            color: aliceblue;
+            cursor: pointer;
+            margin-right: 20px;
+        }
+
+        .crt-btn:hover {
+            background-color: darkgreen;
+            transform: scale(1.06);
+        }
+
+        .edt-btn:hover {
+            background-color: darkblue;
+            transform: scale(1.06);
+        }
+
+        .del-btn:hover {
+            background-color: darkred;
+            transform: scale(1.06);
+        }
     </style>
     <h1>Anjani Furnishing</h1>
-    <h2>Product Information</h2>
+    <h2>Available Products list</h2>
     <table>
         <tr>
-            <th>Product_id</th>
-            <th>Product_name</th>
-            <th>Product_price</th>
-        </tr>
-        <td>01</td>
-        <td>Chair</td>
-        <td>₹4,999</td>
-        <tr>
-            <td>02</td>
-            <td>Table</td>
-            <td>₹9,999</td>
-        </tr>
-        <tr>
-            <td>03</td>
-            <td>Sofa</td>
-            <td>₹19,999</td>
-        </tr>
+            <th scope="col">Product_id</th>
+            <th scope="col">Product_name</th>
+            
+            <th scope="col">Product_price</th>
 
-        <tr>
-            <td>04</td>
-            <td>Wardrobe</td>
-            <td>₹24,999</td>
-        </tr>
-        <tr>
-            <td>05</td>
-            <td>Lamp</td>
-            <td>₹2,999</td>
-        </tr>
-        <tr>
-            <td>06</td>
-            <td>Bed</td>
-            <td>₹39,999</td>
-        </tr>
-        <tr>
-            <td>07</td>
-            <td>Recliner</td>
-            <td>₹25,999</td>
-        </tr>
-        <tr>
-            <td>08</td>
-            <td>Cupboard</td>
-            <td>₹15,999</td>
-        </tr>
-        <tr>
-            <td>09</td>
-            <td>Desk</td>
-            <td>₹15,999</td>
         </tr>
 
     </table>
-    <button onclick="cart-btn">Create</button>
-    <button onclick="edt-btn">Edit</button><hr>
-    <button onclick="dlt-btn">Delete</button>
-
+    <div class="button">
+        <button class="crt-btn">Create</button>
+        <button class="edt-btn">Edit</button>
+        <button class="del-btn">Delete</button>
+    </div>
+<script>
+    
+</script>
 </body>
-
 </html>
