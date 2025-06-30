@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Anjani Furnishing</title>
 </head>
 
 <body>
@@ -106,11 +106,7 @@
         }
     </style>
     <h1>Anjani Furnishing</h1>
-<<<<<<< HEAD
     
-    <p>Anjanis a Furnishing and home Decor company where they are trying to manage their clients and customers data and to know the most sold or selling products data for their refernces to manage and have aidea of their most selling or most purchased items by their client or customers.</p>
-Thank You!
-=======
     <h2>Available Products list</h2>
     <table>
         <tr>
@@ -128,7 +124,29 @@ Thank You!
         <button class="del-btn">Delete</button>
     </div>
 <script>
-    
+     const table = document.querySelector('table');
+        const createBtn = document.querySelector('.crt-btn');
+        const editBtn = document.querySelector('.edt-btn');
+        const deleteBtn = document.querySelector('.del-btn');
+
+        
+        async function loadTableData() {
+            const res = await fetch('/api/products');
+            const data = await res.json();
+
+            
+            while (table.rows.length > 1) {
+                table.deleteRow(1);
+            }
+
+            
+            data.forEach(product => {
+                const row = table.insertRow();
+                row.insertCell(0).innerText = product.id;
+                row.insertCell(1).innerText = product.name;
+                row.insertCell(2).innerText = `₹${product.price}`;
+            });
+        }
 </script>
 >>>>>>> b18fc93d62c44bf2e9c67570314f352ffe15698e
 </body>
