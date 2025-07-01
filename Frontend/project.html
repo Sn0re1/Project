@@ -147,6 +147,59 @@
                 row.insertCell(2).innerText = `₹${product.price}`;
             });
         }
+    window.onload = () => {
+            loadTableData();
+        };
+
+        
+        createBtn.addEventListener('click', async () => {
+            const id =prompt("Enter Prodcut Id:");
+            const name = prompt("Enter product name:");
+            const price = prompt("Enter product price:");
+
+            if (!id || !name || !price) return;
+
+            
+
+            await fetch('/api/products', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ id: id, name: name, price: price })
+            });
+
+            loadTableData();
+        });
+
+        
+        editBtn.addEventListener('click', async () => {
+            const productId = prompt("Enter Product ID to edit:");
+            if (!productId) return;
+
+            const name = prompt("Enter new product name:");
+            const price = prompt("Enter new product price:");
+
+            if (!name || !price) return;
+
+            await fetch(`/api/products/${productId}`, {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name: name, price: price })
+            });
+
+            loadTableData();
+        });
+
+        
+        deleteBtn.addEventListener('click', async () => {
+            const productId = prompt("Enter Product ID to delete:");
+            if (!productId) return;
+
+            await fetch(`/api/products/${productId}`, {
+                method: 'DELETE'
+            });
+
+            loadTableData();
+        });
 </script>
 >>>>>>> b18fc93d62c44bf2e9c67570314f352ffe15698e
 </body>
