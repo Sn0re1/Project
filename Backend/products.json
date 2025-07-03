@@ -43,6 +43,11 @@
         "id": "9",
         "name": "Desk",
         "price": "17,999"
+    },
+    {
+        "id": "10",
+        "name":"Turf",
+        "price":"As per quotation",
     }
     
 ]
