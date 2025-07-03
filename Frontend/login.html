@@ -21,7 +21,7 @@
       }
     </style>
     <h1>Login</h1>
-    <form action="project.html" method="get">
+    <form onsubmit="return adminlogin()">
         <div class="Login">
             
     <label>Username</label>
@@ -31,5 +31,21 @@
     <input type="submit" value="Login">
     </div>
 </form>
+    
+         <script>
+        function adminlogin() {
+            const username = document.getElementById("Username").value;
+            const password = document.getElementById("Password").value;
+
+            if(username === "admin" && password === "admin123") {
+                window.location.href = "project.html";
+            return false;
+            }
+            else{
+                alert("please Try again by entering valid username and password");
+                return false;
+            }
+        }
+    </script>
 </body>
 </html>
