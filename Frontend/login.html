@@ -1,51 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anjani-Furnishing_Login</title>
-</head>
-<body>
-    <style>
-        body{
-            font-family: Arial,sans-serif;
-            text-align: center;
-        }
-       h1{
-        text-align: center;
-        color: blue;
-       } 
-      .class{
-        text-align: center;
-        font-size: larger;
-      }
-    </style>
-    <h1>Login</h1>
-    <form onsubmit="return adminlogin()">
-        <div class="Login">
-            
-    <label>Username</label>
-    <input type="text" id="Username" name="Username" required><br>
-    <label>Password</label>
-    <input type="password" id="Password" name="Password" required><br>
-    <input type="submit" value="Login">
-    </div>
-</form>
-    
-         <script>
-        function adminlogin() {
-            const username = document.getElementById("Username").value;
-            const password = document.getElementById("Password").value;
 
-            if(username === "admin" && password === "admin123") {
-                window.location.href = "project.html";
-            return false;
-            }
-            else{
-                alert("please Try again by entering valid username and password");
-                return false;
-            }
-        }
-    </script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anjani_Furnishing_Login</title>
+</head>
+
+<body>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      color: blue;
+    }
+
+    .Login {
+      margin-top: 20px;
+      display: inline-block;
+      text-align: left;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 300px;
+      padding: 8px;
+      font-size: 16px;
+      margin-bottom: 15px;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      width: 316px;
+      padding: 10px;
+      font-size: 18px;
+      background-color: blue;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: darkblue;
+    }
+  </style>
+  <h1>Please Login with your credentials to get started</h1>
+  <form onsubmit="return adminlogin()">
+    <div class="Login">
+
+      <label>Username</label>
+      <input type="text" id="Username" name="Username" required><br>
+      <label>Password</label>
+      <input type="password" id="Password" name="Password" required><br>
+      <input type="submit" value="Login">
+    </div>
+  </form>
+
+  <script>
+    function adminlogin() {
+      const username = document.getElementById("Username").value;
+      const password = document.getElementById("Password").value;
+
+      if (username === "admin" && password === "admin123") {
+        window.location.href = "project.html";
+        event.preventDefault()
+      }
+      else {
+        alert("please Try again by entering valid username and password");
+      }
+    }
+  </script>
 </body>
+
 </html>
