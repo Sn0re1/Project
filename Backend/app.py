@@ -27,3 +27,7 @@ def index():
 @app.route("/<path:path>")
 def serve_static(path):
     return send_from_directory(app.static_folder, path)
+
+@app.route("/api/products", methods=["GET"])
+def get_products():
+    return jsonify(load_products())
