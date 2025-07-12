@@ -50,3 +50,13 @@ def update_product(id):
             save_products(products)
             return jsonify({"message": "Product updated"})
     return jsonify({"error": "Product not found"}), 404
+
+@app.route("/api/products/<id>", methods=["DELETE"])
+def delete_product(id):
+    products = load_products()
+    products = [p for p in products if str(p["id"]) != str(id)]
+    save_products(products)
+    return jsonify({"message": "Product deleted"}), 200
+
+
+
