@@ -31,3 +31,11 @@ def serve_static(path):
 @app.route("/api/products", methods=["GET"])
 def get_products():
     return jsonify(load_products())
+
+@app.route("/api/products", methods=["POST"])
+def create_product():
+    new_product = request.json
+    products = load_products()
+    products.append(new_product)
+    save_products(products)
+    return jsonify({"message": "Product added"}), 201
