@@ -39,3 +39,14 @@ def create_product():
     products.append(new_product)
     save_products(products)
     return jsonify({"message": "Product added"}), 201
+
+@app.route("/api/products/<id>", methods=["PUT"])
+def update_product(id):
+    data = request.json
+    products = load_products()
+    for product in products:
+        if str(product["id"]) == str(id):
+            product.update(data)
+            save_products(products)
+            return jsonify({"message": "Product updated"})
+    return jsonify({"error": "Product not found"}), 404
