@@ -18,4 +18,12 @@ def load_products():
 def save_products(products):
     with open(DATA_FILE, "w") as file:
         json.dump(products, file, indent=4)
+        
+@app.route("/")
+def index():
+    return send_from_directory(app.static_folder, "project.html")
 
+
+@app.route("/<path:path>")
+def serve_static(path):
+    return send_from_directory(app.static_folder, path)
