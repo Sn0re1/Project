@@ -57,6 +57,8 @@ def delete_product(id):
     products = [p for p in products if str(p["id"]) != str(id)]
     save_products(products)
     return jsonify({"message": "Product deleted"}), 200
+if __name__ == "__main__":
+    app.run(debug=True)
 
 
 
