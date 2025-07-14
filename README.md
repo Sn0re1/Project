@@ -21,6 +21,12 @@ Features:-
 
 For testing:- 
   Login testing: I have created Admin Login, by that login credentials admin can perform CRUD function. 
-  Project testing: All files are tested and they are integrated as per the requirement of the project.
+  Project testing: All files are tested and they are integrated as per the requirement of the project. All files including html and json and python files are tested and are also working properly.
 
+References:-
+1.) Tech With Tim – Flask Tutorial for Beginners(YouTube) – https://www.youtube.com/watch?v=Z1RJmh_OqeA
+2.) MDN Web Docs (JavaScript fetch API) – https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+3.) W3Schools – JSON Syntax and Structure Guide - https://www.w3schools.com/js/js_json_syntax.asp
+4.)DesignCourse - CRUD Application Using Flask and JSON(YouTube)-  https://www.youtube.com/watch?v=qTGbWfEEnKI 
+ 
 
