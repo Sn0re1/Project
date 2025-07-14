@@ -58,7 +58,7 @@ def delete_product(id):
     save_products(products)
     return jsonify({"message": "Product deleted"}), 200
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run( host="0.0.0.0", port=5000, debug=True)
 
 
 
