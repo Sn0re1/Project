@@ -28,5 +28,6 @@ References:-
 2.) MDN Web Docs (JavaScript fetch API) – https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
 3.) W3Schools – JSON Syntax and Structure Guide - https://www.w3schools.com/js/js_json_syntax.asp
 4.)DesignCourse - CRUD Application Using Flask and JSON(YouTube)-  https://www.youtube.com/watch?v=qTGbWfEEnKI 
+5.)Human help - Help taken from my friend and classmate(help taken for some issues in VM and for a little bit of flask as well.)- Krishna Sharma(20060957)
  
 
