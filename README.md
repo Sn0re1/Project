@@ -11,12 +11,25 @@ Technologies used:-
 In frontend I have used two files of HTML named (login.html & project.html and both of these HTML files consists of embedded CSS & JS).
 In backend I have used  two files one of them is JSON file to store product data which is named as products.json and other file where data is fetched using API by Python with the framework of flask and that file is named as app.py.
 
+Folder structure:-
+project/
+│
+├── Frontend/
+│   ├── login.html
+│   └── project.html
+│
+├── Backend/
+│   ├── app.py
+│   └── products.json
+│
+└── README.md
+
 
 Features:-
-     Create= Admin can add a new product
-     Read= Fetches all existing products
-     Update= Admin can modify/edit the existing product list by entering the product id
-     Delete= Admin can delete existing products list by entering the product id.
+     Create= Admin can add a new product("POST")
+     Read= Fetches all existing products("GET")
+     Update= Admin can modify/edit the existing product list by entering the product id("PUT")
+     Delete= Admin can delete existing products list by entering the product id.("Delete")
 
 
 For testing:- 
@@ -29,5 +42,10 @@ References:-
 3.) W3Schools – JSON Syntax and Structure Guide - https://www.w3schools.com/js/js_json_syntax.asp
 4.)DesignCourse - CRUD Application Using Flask and JSON(YouTube)-  https://www.youtube.com/watch?v=qTGbWfEEnKI 
 5.)Human help - Help taken from my friend and classmate(help taken for some issues in VM and for a little bit of flask as well.)- Krishna Sharma(20060957)
+6.)AI help - for adding port and  host - https://chatgpt.com/share/6877a736-4710-8001-991d-0a6dfeb6aa9f and in commit - https://github.com/Sn0re1/Project/commit/3bd88cd915371eef7cbdadeade256da2974f14ec 
+7.)AI help - for status codes- https://chatgpt.com/share/6877ad0c-3a04-8001-8898-c9ef78022af9 
+8.)AI help - used folder structure only - https://chatgpt.com/share/6877af10-22dc-8001-95bf-ce3128fd916b 
+
+  
  
 
